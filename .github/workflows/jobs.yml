@@ -14,21 +14,21 @@ jobs:
      runs-on: ubuntu-latest
      needs: job_1
      steps:
-       - run: "echp Job ${{github.job}}"
+       - run: "echo Job ${{github.job}}"
 
 
   job_3:
      runs-on: ubuntu-latest
      needs: job_1
      steps:
-       - run: "echp Job ${{github.job}}"
+       - run: "echo Job ${{github.job}}"
 
 
   job_4:
     runs-on: ubuntu-latest
     needs: [job_2, job_3]
     steps:
-      - run: "echp Job ${{github.job}}"
+      - run: "echo Job ${{github.job}}"
 
 
   
