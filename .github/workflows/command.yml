@@ -9,4 +9,6 @@ jobs:
        - name: setApiKey
          run: echo "Api_key=1234567" >> $GITHUB_ENV
        - name: getApiKey
-         run:  echo "Using Api Key $Api_key"
+         run: | 
+            echo "::add-mask::$Api_key"
+            echo "Using Api Key $Api_key"
